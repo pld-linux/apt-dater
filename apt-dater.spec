@@ -7,13 +7,12 @@ Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/apt-dater/%{name}-%{version}.tar.gz
 # Source0-md5:	a8ac240ddfb7d4c500505f9d5d821185
 URL:		http://www.ibh.de/apt-dater/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	perl-base
+BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
 BuildRequires:	screen
 BuildRequires:	sed >= 4.0
