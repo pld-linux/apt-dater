@@ -6,6 +6,7 @@ License:	GPL v2
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/apt-dater/%{name}-%{version}.tar.gz
 # Source0-md5:	a8ac240ddfb7d4c500505f9d5d821185
+Patch0:		kernel-pld-longterm.patch
 URL:		http://www.ibh.de/apt-dater/
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel
@@ -34,7 +35,6 @@ Group:		Applications/System
 Requires:	lsb-release
 Requires:	openssh-server
 Suggests:	imvirt
-Suggests:	perl-imvirt
 Suggests:	sudo
 %if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
@@ -51,6 +51,7 @@ be installed on every apt-dater managed host.
 
 %prep
 %setup -q
+%patch0 -p1
 
 sed -i "s/manhdir = .*$/manhdir = @docdir@/" man/Makefile.in
 

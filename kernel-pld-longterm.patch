@@ -1,0 +1,14 @@
+patch to find "-longterm" from "3.4.51.longterm-1"
+
+--- apt-dater-0.9.0/clients/rpm/apt-dater-host	2012-05-28 23:33:34.000000000 +0300
++++ apt-dater-0.9.0/clients/rpm/apt-dater-host	2013-09-10 00:37:00.000000000 +0300
+@@ -155,8 +155,8 @@
+     my $ver = $version;
+     my $rel = '';
+     my $add = '';
+-    $add = $1 if($version =~ /([a-z]+)$/);
++    $add = $1 if($version =~ /([a-z]+)(?:-\d+)?$/);
+     ($ver, $rel) = ($1, $2) if($version =~ /(.+)-([^-]+)$add$/);
+ 
+     $add = "-$add" if($add);
+ 
