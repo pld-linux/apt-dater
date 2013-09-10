@@ -18,6 +18,7 @@ BuildRequires:	popt-devel
 BuildRequires:	screen
 BuildRequires:	sed >= 4.0
 BuildRequires:	tcl-devel
+Requires:	openssh-clients
 Requires:	screen
 Requires:	tcl
 Suggests:	%{name}-host
@@ -34,6 +35,7 @@ Summary:	host helper application for apt-dater
 Group:		Applications/System
 Requires:	lsb-release
 Requires:	openssh-server
+Requires:	which
 Suggests:	imvirt
 Suggests:	sudo
 %if "%{_rpmversion}" >= "5"
