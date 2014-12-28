@@ -8,7 +8,7 @@ Source0:	http://downloads.sourceforge.net/apt-dater/%{name}-%{version}.tar.gz
 # Source0-md5:	a8ac240ddfb7d4c500505f9d5d821185
 Patch0:		kernel-pld-longterm.patch
 URL:		http://www.ibh.de/apt-dater/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	ncurses-devel
