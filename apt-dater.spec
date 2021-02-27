@@ -38,9 +38,7 @@ Requires:	openssh-server
 Requires:	which
 Suggests:	imvirt
 Suggests:	sudo
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description host
 apt-dater provides an easy to use ncurses frontend for managing
